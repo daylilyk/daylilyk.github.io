@@ -4,8 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
-        <title>Your Name Here</title>
+        <title>Daylily Kiousis</title>
         <link rel="stylesheet" type="text/css" href="./css/Portfolio.css">
+        <link rel="shortcut icon" type="img/jpg" href="media/coding_icon.png">
     </head>
 
     <!--Body-->
@@ -17,7 +18,7 @@
                 <li><a class="active" href="#Home">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#GitHub">GitHub</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a></li>
             </ul>
         </div>
     <br>
@@ -31,18 +32,80 @@
 
     <!--Video Text-->
     <div class="video_text">
-        <h1 class="white-text">Daylily Kiousis' Portfolio</h1>
+        <h1 class="white-text">Welcome to my portfolio</h1>
         <strong>
                 <p class="center">
-                    <q>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” </q>
+                    <q>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</q>
                     <br><em>Martin Fowler</em>
                     <br>
-                    <br>My name is Daylily Kiousis (they/them). Welcome to my portfolio website! I'm excited to share a bit of who I am and what work I can do with you.
+                    <br>Welcome to my portfolio website! My name is Daylily Kiousis (they/them). I'm excited to share a bit of who I am and what work I can do with you.
                     <br>
                     <br> Thank you for your time. Enjoy!
                 </p>
         </strong>
     </div>
+
+    <!--Slideshow section-->
+
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!--Slide 1 of 6-->
+                <div class="mySlides fade" style="display: block;">
+                    <a href="https://www.linkedin.com/in/daylily-kiousis-43207b23a/"><img class="Slideshow_Images" src="media/self_portrait.jpg" alt="Linkedin links and self portrait"></a>
+                        <div class="text">Visit me on LinkedIn!</div>
+                </div>
+
+                <!--Slide 2 of 6-->
+                <div class="mySlides fade" style="display: none;">
+                    <img class="Slideshow_Images" src="media/HTML_CSS_and_JavaScript.jpeg">
+                        <div class="text">I am a full stack developer <br> " trained in: " <br> "HTML, CSS, JavaScript,"</div>
+                </div>
+
+                <!--Slide 3 of 6-->
+                <div class="mySlides fade" style="display: block;">
+                    <img class="Slideshow_Images" src="media/Python.png">
+                        <div class="text">I am also trained in the popular language Python, </div>
+                </div>
+
+                <!--Slide 4 of 6-->
+                <div class="mySlides fade" style="display: none">
+                    <img class="Slideshow_Images" src="media/Csharp_Logo.png">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+
+                <!--Slide 5 of 6-->
+                <div class="mySlides fade" style="display: none">
+                    <img class="Slideshow_Images" src="media/SQL_and_Database.jpg">
+                        <div class="text"> as well as back end development, databases and SQL.</div>
+                </div>
+
+                <!--Slide 6 of 6-->
+                <div class="Slideshow_Images" style="display: none">
+                    <img class="Slideshow_Images" src="media/Coding_1.jpg">
+                        <div class="text">
+                            <a class="white-text contact" onclick="openForm()">Contact me now!</a>
+                        </div>
+                </div>
+
+                <!--Previous and next buttons-->
+                <a class="Previous" onclick="plusSlides(-1)">❮</a>
+                <a class="Next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <br>
+
+            <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot active" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+        </div>
+    </div>
+    
 
     <!--About section-->
         <div class="Row" id="About">
@@ -54,7 +117,7 @@
             <div class="column_1">
                 <h1>About</h1>
                 <p>
-                    I am a junior software developer with an interested about the ways coding can be used to create community. I am passionate about the arts and traveling and spend my free time in nature and creating art across multiple mediums.
+                    I am a junior software developer with an interest in the ways coding can be used to create community. I am passionate about the arts and traveling, the outdoors, and creating art across multiple mediums.
                     <br>
                     <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
                     <br>
@@ -83,26 +146,28 @@
         </div>
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact Image, left column-->
-            <div class="column_2 column_tall">
-                <img src="./media/keyboard.jpg" alt="Keyboard with red lighting">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm" ondblclick="closeForm()">
+                 <form action="https://formspree.io/f/xyyovgnv" method="POST" class="form-container">
+                     <h1>Contact</h1>
+                     <label for="name"><b>Name</b></label>
+                       <input type="text" placeholder="Type your name here" name="name" required="">
+                     <label for="phone"><b>Phone</b></label>
+                       <input type="text" placeholder="Type your phone number here" name="phone">
+                     <label for="email"><b>Email</b></label>		
+                       <input type="text" placeholder="Type your email address here" name="email" required="">
+                     <label for="message"><b>Message</b></label>
+                       <input type="text" placeholder="Type your message here" name="message">
+          
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                 </form>
             </div>
-            <!--Contact form, right column-->
-            <div class="column_1 column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data-->
-                <form action="https://formspree.io/f/xyyovgnv" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
-            </div>
-        </div>
+         </div>
+
+        <script src="JS/portfolio_js.js"></script>
+    </body>
 
     <!--Footer section-->
         <footer>
