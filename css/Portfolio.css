@@ -3,7 +3,7 @@ html {
 }
 
 .Background {
-    background-color: rgb(136, 44, 1);
+    background-color: rgb(0, 46, 1);
 }
 ul {
     list-style-type: none;
@@ -28,7 +28,7 @@ li a {
 }
 
 li a:hover {
-    background-color: rgb(10, 3, 109);
+    background-color: rgb(208, 80, 0);
 }
 
 /* Body */
@@ -67,7 +67,7 @@ h1:hover {
 /* Styling for portfolio title text */
 .white-text {
     color: #fff; /* This is used to change the color of the portfolio title text */
-    padding-top: 10vh;
+    
 }
 
 /* Paragraph elements */
@@ -100,7 +100,7 @@ p:hover {
 
 /* Anchor elements */
 a {
-    color: rgb(136, 44, 1); /* This ensures all links are red */
+    color: rgb(10, 1, 136); /* This ensures all links are blue */
     font-weight: bold;
     cursor: pointer;
     text-decoration: underline;
@@ -194,7 +194,7 @@ footer {
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: rgb(136, 44, 1);
+    background-color: rgb(0, 46, 1);
 }
 /***** End of Navbar Styling *****/
 
@@ -358,7 +358,7 @@ footer {
     padding: 10px;
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: rgb(10, 3, 109); /* Sets the background color of the columns with class Column_1 */
+    background-color: rgb(109, 24, 3); /* Sets the background color of the columns with class Column_1 */
     
 }
 
