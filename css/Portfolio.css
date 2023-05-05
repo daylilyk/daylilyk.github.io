@@ -358,7 +358,7 @@ footer {
     padding: 10px;
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: rgb(109, 24, 3); /* Sets the background color of the columns with class Column_1 */
+    background-color: rgb(0, 46, 1); /* Sets the background color of the columns with class Column_1 */
     
 }
 
