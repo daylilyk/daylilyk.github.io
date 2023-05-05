@@ -139,7 +139,7 @@ img:hover {
 /* Styling for footer element */
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color: rgb(3, 1, 29);
+    background-color: rgb(0, 46, 1);
     color: #ccc;
 }
 
